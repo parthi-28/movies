@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 export default function App() {
   const students = [
     {
@@ -35,15 +35,13 @@ export default function App() {
   ];
   function Starting({ movieName, posterURL, rating, summary }) {
     const styles= {color :rating>= "8.5/10" ?"teal" :"crimson"};
-    const[like, setlike]=useState(1)
     return (
       <div className="list">
           <img src={posterURL} className="poster" alt="avatar" />
           <div>
          <h2>{movieName}</h2> 
           <p style={styles}>{rating}</p>
-          <h4>{like}</h4>
-          <button onClick={()=> setlike(like+1)}>
+          <button>
             like
           </button>
           <br />

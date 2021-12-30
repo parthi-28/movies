@@ -42,10 +42,9 @@ export default function App() {
           <div>
          <h2>{movieName}</h2> 
           <p style={styles}>{rating}</p>
-          <h4>{like}</h4>
           <button onClick={()=> setlike(like+1)}>
             like
-          </button>
+          </button><h4>{like}</h4>
           <br />
           <p>{summary}</p>
           </div>

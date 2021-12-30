@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 export default function App() {
   const students = [
     {
@@ -28,24 +28,18 @@ export default function App() {
     },
     {
       title: "Ulagam Sutrum Valiban (உலகம் சுற்றும் வாலிபன்)",
-      imdb: "8.9/10",
+      imdb: "6.5/10",
       picture: "https://images-na.ssl-images-amazon.com/images/I/818CbL9K3dL._RI_.jpg",
       plot: "Scientist Murugan has a formula that can harness energy from lightening. A rival wants it for his evil plans. When Murugan disappears, his brother goes around the world to find him and save the world."
     }
   ];
   function Starting({ movieName, posterURL, rating, summary }) {
-    const styles= {color :rating>= "8.5/10" ?"teal" :"crimson"};
-    const[like, setlike]=useState(1)
     return (
       <div className="list">
           <img src={posterURL} className="poster" alt="avatar" />
           <div>
          <h2>{movieName}</h2> 
-          <p style={styles}>{rating}</p>
-          <h4>{like}</h4>
-          <button onClick={()=> setlike(like+1)}>
-            like
-          </button>
+          <p>{rating}</p>
           <br />
           <p>{summary}</p>
           </div>
