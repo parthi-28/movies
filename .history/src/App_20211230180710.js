@@ -36,7 +36,6 @@ export default function App() {
   function Starting({ movieName, posterURL, rating, summary }) {
     const styles= {color :rating>= "8.5/10" ?"teal" :"crimson"};
     const[like, setlike]=useState(1000)
-    const [dislike, setDislike]=useState(0)
     return (
       <div className="list">
           <img src={posterURL} className="poster" alt="avatar" />
@@ -45,10 +44,7 @@ export default function App() {
           <p style={styles}>{rating}</p>
           
           <button onClick={()=> setlike(like+1)}>
-            like  {like}
-          </button>
-          <button onClick={()=> setDislike(dislike+1)}>
-            Dislike  {dislike}
+            like{like}
           </button>
           <br />
           <p>{summary}</p>

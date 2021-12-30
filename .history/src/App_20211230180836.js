@@ -45,10 +45,10 @@ export default function App() {
           <p style={styles}>{rating}</p>
           
           <button onClick={()=> setlike(like+1)}>
-            like  {like}
+            like{like}
           </button>
           <button onClick={()=> setDislike(dislike+1)}>
-            Dislike  {dislike}
+            Dislike{dislike}
           </button>
           <br />
           <p>{summary}</p>
