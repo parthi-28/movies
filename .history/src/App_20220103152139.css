@@ -24,3 +24,9 @@ body{
   margin: 20px;
   padding: 20px;;
 }
+.summary{
+  display: none;
+}
+.summary.hidden{
+  display: block;
+}

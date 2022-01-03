@@ -39,7 +39,7 @@ export default function App() {
     // const summaryHidden = {display:"none"};
     const[like, setlike]=useState(1000)
     const [dislike, setDislike]=useState(0)
-    const [toggle, setToggle]=useState(true)
+    const [toggle, setToggle]=useState(false)
 
     // const toggleBtn=()=>{
     //   if(toggle==summaryVisible){
@@ -62,8 +62,7 @@ export default function App() {
             Dislike  {dislike}
           </button>
           <br />
-          <br/>
-          <button onClick={()=>setToggle(!toggle)}>Toggle summary</button>
+          <button onClick={()=>setToggle(!toggle)}>toggle</button>
           {toggle?<p>{summary}</p>:null}
           </div>
       </div>

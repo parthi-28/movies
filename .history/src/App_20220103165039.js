@@ -62,8 +62,7 @@ export default function App() {
             Dislike  {dislike}
           </button>
           <br />
-          <br/>
-          <button onClick={()=>setToggle(!toggle)}>Toggle summary</button>
+          <button onClick={()=>setToggle(!toggle)}>toggle</button>
           {toggle?<p>{summary}</p>:null}
           </div>
       </div>

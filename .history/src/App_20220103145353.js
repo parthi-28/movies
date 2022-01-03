@@ -35,24 +35,12 @@ export default function App() {
   ];
   function Starting({ movieName, posterURL, rating, summary }) {
     const styles= {color :rating>= "8.5/10" ?"teal" :"crimson"};
-    // const summaryVisible ={display:"block"};
-    // const summaryHidden = {display:"none"};
     const[like, setlike]=useState(1000)
     const [dislike, setDislike]=useState(0)
-    const [toggle, setToggle]=useState(true)
-
-    // const toggleBtn=()=>{
-    //   if(toggle==summaryVisible){
-    //     setToggle(summaryHidden);
-    //   }else{
-    //     toggle(summaryVisible);
-    //   }
-    // }
-      
     return (
       <div className="list">
           <img src={posterURL} className="poster" alt="avatar" />
-          <div className="container">
+          <div>
          <h2>{movieName}</h2> 
           <p style={styles}>{rating}</p>
           <button onClick={()=> setlike(like+1)}>
@@ -62,9 +50,7 @@ export default function App() {
             Dislike  {dislike}
           </button>
           <br />
-          <br/>
-          <button onClick={()=>setToggle(!toggle)}>Toggle summary</button>
-          {toggle?<p>{summary}</p>:null}
+          <p onClick={"toggle"}>{summary}</p>
           </div>
       </div>
     );
@@ -73,7 +59,7 @@ export default function App() {
     <div className="App">
       <h1>VINTAGE COLLECTION</h1>
       {students.map(({ title, imdb, picture, plot }) => (
-        <Starting movieName={title} posterURL={picture} rating={imdb} summary={plot} key={imdb} />
+        <Starting movieName={title} posterURL={picture} rating={imdb} summary={plot} />
       ))}
     </div>
   );
